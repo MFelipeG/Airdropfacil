@@ -4,13 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airdrop Fácil</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f0f8ff; text-align: center; }
-        .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #0073e6; }
+        body { font-family: Arial, sans-serif; background-color: #121212; text-align: center; color: #ffffff; }
+        .container { max-width: 800px; margin: auto; padding: 20px; background: #1e1e1e; border-radius: 10px; box-shadow: 0 0 10px rgba(255,255,255,0.1); }
+        h1 { color: #ffcc00; }
         .category { margin: 20px 0; }
         .airdrop-list { list-style: none; padding: 0; }
-        .airdrop-list li { background: #e0f7fa; margin: 10px 0; padding: 10px; border-radius: 5px; border-left: 5px solid #0073e6; }
-        .category h2 { color: #004d99; }
+        .airdrop-list li { background: linear-gradient(135deg, #ff6a00, #ee0979); margin: 10px 0; padding: 10px; border-radius: 5px; border-left: 5px solid #ffcc00; color: #fff; }
+        .category h2 { color: #00e676; }
+        a { color: #00eaff; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -51,7 +53,7 @@
             const list = document.getElementById(category);
             airdrops[category].forEach(airdrop => {
                 const li = document.createElement("li");
-                li.innerHTML = `<strong>${airdrop.name}</strong> - <a href="${airdrop.link}" style="color: #0073e6; text-decoration: none; font-weight: bold;">Participar</a> (${airdrop.status})`;
+                li.innerHTML = `<strong>${airdrop.name}</strong> - <a href="${airdrop.link}">Participar</a> (${airdrop.status})`;
                 list.appendChild(li);
             });
         }
