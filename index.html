@@ -4,12 +4,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airdrop Fácil</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }
+        body { font-family: Arial, sans-serif; background-color: #f0f8ff; text-align: center; }
         .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
+        h1 { color: #0073e6; }
         .category { margin: 20px 0; }
         .airdrop-list { list-style: none; padding: 0; }
-        .airdrop-list li { background: #e0e0e0; margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .airdrop-list li { background: #e0f7fa; margin: 10px 0; padding: 10px; border-radius: 5px; border-left: 5px solid #0073e6; }
+        .category h2 { color: #004d99; }
     </style>
 </head>
 <body>
@@ -50,7 +51,7 @@
             const list = document.getElementById(category);
             airdrops[category].forEach(airdrop => {
                 const li = document.createElement("li");
-                li.innerHTML = `<strong>${airdrop.name}</strong> - <a href="${airdrop.link}">Participar</a> (${airdrop.status})`;
+                li.innerHTML = `<strong>${airdrop.name}</strong> - <a href="${airdrop.link}" style="color: #0073e6; text-decoration: none; font-weight: bold;">Participar</a> (${airdrop.status})`;
                 list.appendChild(li);
             });
         }
