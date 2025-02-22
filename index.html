@@ -1,65 +1,117 @@
-<!DOCTYPE html><html lang="pt">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airdrop Fácil</title>
     <style>
-        body { font-family: Arial, sans-serif; background-color: #121212; text-align: center; color: #ffffff; }
-        .container { max-width: 800px; margin: auto; padding: 20px; background: #1e1e1e; border-radius: 10px; box-shadow: 0 0 10px rgba(255,255,255,0.1); }
-        h1 { color: #ffcc00; }
-        .category { margin: 20px 0; }
-        .airdrop-list { list-style: none; padding: 0; }
-        .airdrop-list li { background: linear-gradient(135deg, #ff6a00, #ee0979); margin: 10px 0; padding: 10px; border-radius: 5px; border-left: 5px solid #ffcc00; color: #fff; }
-        .category h2 { color: #00e676; }
-        a { color: #00eaff; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #007bff;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: #e9ecef;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Airdrop Fácil</h1>
-        <p>Encontre os melhores airdrops de forma rápida e fácil!</p><div class="category">
-        <h2>Sites</h2>
-        <ul class="airdrop-list" id="sites"></ul>
-    </div>
+        <h1>Airdrop Fácil</h1><h2>Sites</h2>
+    <ul id="site-list"></ul>
     
-    <div class="category">
-        <h2>Apps</h2>
-        <ul class="airdrop-list" id="apps"></ul>
-    </div>
-    
-    <div class="category">
-        <h2>Bots do Telegram</h2>
-        <ul class="airdrop-list" id="bots"></ul>
-    </div>
+    <h2>Apps</h2>
+    <ul id="app-list"></ul>
 </div>
 
 <script>
     const airdrops = {
-        sites: [
-            { name: "Airdrop X", link: "#", status: "Participando" },
-            { name: "Airdrop Y", link: "#", status: "Esperando" }
+        site: [
+            { 
+                name: "NodePay", 
+                link: "https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS",
+                description: "Sua internet e dados são recursos valiosos na economia de IA, a NodePay os transforma em ativos que você possui."
+            },
+            { 
+                name: "Nebux", 
+                link: "https://nebx.io/login?v=94514613",
+                description: "Our X Social Platform Deserves More Value. I just claimed 33,601 XCOIN! What about you? Rate your profile and claim your free $XCOIN #NebX #airdrop now!"
+            }
         ],
-        apps: [
-            { name: "Airdrop Z", link: "#", status: "Recebido" }
-        ],
-        bots: [
-            { name: "Airdrop Telegram A", link: "#", status: "Participando" }
+        app: [
+            { 
+                name: "BioMatrix", 
+                link: "https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q",
+                code: "BAXT1Q",
+                description: "Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos."
+            },
+            { 
+                name: "NodePay", 
+                link: "https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS",
+                description: "Sua internet e dados são recursos valiosos na economia de IA, a NodePay os transforma em ativos que você possui."
+            },
+            { 
+                name: "BlockDag", 
+                link: "https://blockdag.network/product/blockdagx1",
+                code: "JMOBwk3l",
+                description: "Bem-vindo à BlockDAG Mining, o portal para mineração de criptomoedas móveis sem esforço. Nossa plataforma prioriza uma experiência centrada no usuário, capacitando o engajamento direto na rede diretamente da conveniência do seu smartphone."
+            }
         ]
     };
 
-    function loadAirdrops() {
-        for (const category in airdrops) {
-            const list = document.getElementById(category);
-            airdrops[category].forEach(airdrop => {
-                const li = document.createElement("li");
-                li.innerHTML = `<strong>${airdrop.name}</strong> - <a href="${airdrop.link}">Participar</a> (${airdrop.status})`;
-                list.appendChild(li);
-            });
-        }
+    function generateList(category) {
+        let list = document.getElementById(category + "-list");
+        list.innerHTML = "";
+        airdrops[category].forEach(airdrop => {
+            let li = document.createElement("li");
+            li.innerHTML = `<strong>${airdrop.name}</strong> - 
+            <a href="${airdrop.link}" target="_blank">CLIQUE AQUI</a> 
+            ${airdrop.code ? `<button class="copy-btn" onclick="copyCode('${airdrop.code}')">Copiar Código</button>` : ''}
+            <p>${airdrop.description}</p>`;
+            list.appendChild(li);
+        });
     }
-    
-    loadAirdrops();
+
+    function copyCode(code) {
+        navigator.clipboard.writeText(code).then(() => {
+            alert("Código copiado: " + code);
+        });
+    }
+
+    generateList("site");
+    generateList("app");
 </script>
 
 </body>
