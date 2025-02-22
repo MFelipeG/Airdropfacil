@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airdrop Fácil</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; }
+        .container { max-width: 800px; margin: auto; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h1 { color: #333; }
+        .category { margin: 20px 0; }
+        .airdrop-list { list-style: none; padding: 0; }
+        .airdrop-list li { background: #e0e0e0; margin: 10px 0; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Airdrop Fácil</h1>
+        <p>Encontre os melhores airdrops de forma rápida e fácil!</p><div class="category">
+        <h2>Sites</h2>
+        <ul class="airdrop-list" id="sites"></ul>
+    </div>
+    
+    <div class="category">
+        <h2>Apps</h2>
+        <ul class="airdrop-list" id="apps"></ul>
+    </div>
+    
+    <div class="category">
+        <h2>Bots do Telegram</h2>
+        <ul class="airdrop-list" id="bots"></ul>
+    </div>
+</div>
+
+<script>
+    const airdrops = {
+        sites: [
+            { name: "Airdrop X", link: "#", status: "Participando" },
+            { name: "Airdrop Y", link: "#", status: "Esperando" }
+        ],
+        apps: [
+            { name: "Airdrop Z", link: "#", status: "Recebido" }
+        ],
+        bots: [
+            { name: "Airdrop Telegram A", link: "#", status: "Participando" }
+        ]
+    };
+
+    function loadAirdrops() {
+        for (const category in airdrops) {
+            const list = document.getElementById(category);
+            airdrops[category].forEach(airdrop => {
+                const li = document.createElement("li");
+                li.innerHTML = `<strong>${airdrop.name}</strong> - <a href="${airdrop.link}">Participar</a> (${airdrop.status})`;
+                list.appendChild(li);
+            });
+        }
+    }
+    
+    loadAirdrops();
+</script>
+
+</body>
+</html>
