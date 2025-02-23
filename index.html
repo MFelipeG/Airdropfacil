@@ -6,13 +6,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #ffffff;
             text-align: center;
             padding: 20px;
         }
         h1 {
-            color: #ffcc00;
+            color: #00ffcc;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .container {
@@ -24,7 +24,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .airdrop {
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            background: linear-gradient(135deg, #0072ff, #00c6ff);
             padding: 15px;
             margin: 10px 0;
             border-radius: 10px;
@@ -35,14 +35,32 @@
             transform: scale(1.05);
         }
         a {
-            color: #ffcc00;
+            color: #00ffcc;
             text-decoration: none;
             font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
         }
+        .copy-btn {
+            background-color: #00ffcc;
+            color: #000;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .copy-btn:hover {
+            background-color: #00c6ff;
+        }
     </style>
+    <script>
+        function copyCode(code) {
+            navigator.clipboard.writeText(code).then(() => {
+                alert("Código copiado: " + code);
+            });
+        }
+    </script>
 </head>
 <body>
     <h1>Airdrop Fácil</h1>
@@ -51,7 +69,7 @@
             <h2>BioMatrix</h2>
             <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
             <p><a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" target="_blank">🔗 Clique Aqui</a></p>
-            <p><strong>Código:</strong> BAXT1Q</p>
+            <p><strong>Código:</strong> <button class="copy-btn" onclick="copyCode('BAXT1Q')">Copiar Código</button></p>
         </div>
         <div class="airdrop">
             <h2>NodePay</h2>
@@ -62,7 +80,7 @@
             <h2>BlockDag</h2>
             <p>Bem-vindo à BlockDAG Mining, o portal para mineração de criptomoedas móveis sem esforço.</p>
             <p><a href="https://blockdag.network/product/blockdagx1" target="_blank">🔗 Clique Aqui</a></p>
-            <p><strong>Código:</strong> JMOBwk3l</p>
+            <p><strong>Código:</strong> <button class="copy-btn" onclick="copyCode('JMOBwk3l')">Copiar Código</button></p>
         </div>
         <div class="airdrop">
             <h2>Nebux</h2>
