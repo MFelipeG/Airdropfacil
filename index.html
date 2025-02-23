@@ -5,26 +5,26 @@
     <title>Airdrop Fácil</title>
     <style>
         body {
-            background-color: #1a1a2e; /* Azul mais suave */
+            background-color: #2a2a2a;
             color: #ffffff;
             font-family: Arial, sans-serif;
             text-align: center;
         }
         .container {
             width: 80%;
-            margin: auto;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #222;
+            background-color: #1e1e1e;
             border-radius: 10px;
         }
         .airdrop {
-            background-color: #333;
+            margin: 20px 0;
             padding: 15px;
-            margin: 10px 0;
-            border-radius: 5px;
+            background-color: #333333;
+            border-radius: 8px;
         }
-        .botao {
-            background-color: #008CBA;
+        .btn {
+            background-color: #4CAF50;
             color: white;
             padding: 10px 15px;
             border: none;
@@ -32,32 +32,54 @@
             border-radius: 5px;
             margin-top: 10px;
         }
-        .botao:hover {
-            background-color: #005f73;
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .code {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 10px;
         }
     </style>
-</head>
-<body>
-    <h1>Airdrop Fácil</h1>
-    <h2>Ganhe criptomoedas de forma simples e rápida</h2>
-    <div class="container">
-        <div class="airdrop">
-            <h3>BioMatrix</h3>
-            <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
-            <a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" target="_blank" class="botao">Clique Aqui</a>
-            <button class="botao" onclick="copiarCodigo('BAXT1Q')">Copiar Código</button>
-        </div>
-        <div class="airdrop">
-            <h3>NodePay</h3>
-            <p>Sua internet e dados são recursos valiosos na economia de IA, a Nodepay os transforma em ativos que você possui.</p>
-            <a href="https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS" target="_blank" class="botao">Clique Aqui</a>
-        </div>
-    </div>
     <script>
-        function copiarCodigo(codigo) {
-            navigator.clipboard.writeText(codigo);
-            alert("Código copiado: " + codigo);
+        function copyCode(code) {
+            navigator.clipboard.writeText(code);
+            alert("Código copiado: " + code);
         }
     </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Airdrop Fácil</h1>
+        <h2>Ganhe criptomoedas de forma simples!</h2><div class="airdrop">
+        <h3>BioMatrix</h3>
+        <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
+        <a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" class="btn">Clique Aqui</a>
+        <div class="code" onclick="copyCode('BAXT1Q')">BAXT1Q</div>
+    </div>
+    
+    <div class="airdrop">
+        <h3>NodePay</h3>
+        <p>Sua internet e dados são recursos valiosos na economia de IA, a Nodepay os transforma em ativos que você possui.</p>
+        <a href="https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS" class="btn">Clique Aqui</a>
+    </div>
+    
+    <div class="airdrop">
+        <h3>BlockDag</h3>
+        <p>Bem-vindo à BlockDAG Mining, o portal para mineração de criptomoedas móveis sem esforço.</p>
+        <a href="https://blockdag.network/product/blockdagx1" class="btn">Clique Aqui</a>
+        <div class="code" onclick="copyCode('JMOBwk3l')">JMOBwk3l</div>
+    </div>
+    
+    <div class="airdrop">
+        <h3>Nebux</h3>
+        <p>Our X Social Platform Deserves More Value. I just claimed 33,601 XCOIN! What about you?</p>
+        <a href="https://nebx.io/login?v=94514613" class="btn">Clique Aqui</a>
+    </div>
+</div>
+
 </body>
 </html>
