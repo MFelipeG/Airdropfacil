@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://airdropfaci.netlify.app/sitemap.xml
