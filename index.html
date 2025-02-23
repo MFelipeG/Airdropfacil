@@ -15,7 +15,7 @@
             margin: auto;
         }
         .box {
-            background: #2E8B57;
+            background: #000;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -30,7 +30,24 @@
             border-radius: 5px;
             text-decoration: none;
         }
+        .copy-button {
+            background: #f39c12;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
+    <script>
+        function copyCode(code) {
+            navigator.clipboard.writeText(code).then(function() {
+                alert("Código copiado!");
+            }, function(err) {
+                alert("Erro ao copiar código: " + err);
+            });
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -39,7 +56,7 @@
         <h3>BioMatrix</h3>
         <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
         <a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" class="button" target="_blank">Clique Aqui</a>
-        <p>Código: BAXT1Q</p>
+        <p>Código: BAXT1Q <button class="copy-button" onclick="copyCode('BAXT1Q')">Copiar</button></p>
     </div>
 
     <div class="box">
@@ -52,7 +69,7 @@
         <h3>BlockDag</h3>
         <p>Bem-vindo à BlockDAG Mining, o portal para mineração de criptomoedas móveis sem esforço.</p>
         <a href="https://blockdag.network/product/blockdagx1" class="button" target="_blank">Clique Aqui</a>
-        <p>Código: JMOBwk3l</p>
+        <p>Código: JMOBwk3l <button class="copy-button" onclick="copyCode('JMOBwk3l')">Copiar</button></p>
     </div>
 
     <div class="box">
