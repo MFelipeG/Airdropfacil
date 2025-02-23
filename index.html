@@ -6,65 +6,86 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #4CAF50, #2196F3);
-            color: white;
+            background-color: #1E1E1E;
+            color: #FFFFFF;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
         .container {
-            width: 80%;
-            margin: auto;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #333333;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
-        .airdrop-box {
-            background: black;
+        h1 {
+            color: #4CAF50;
+        }
+        .airdrop {
+            background-color: #2C2C2C;
             padding: 15px;
             margin: 10px 0;
-            border-radius: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+        .airdrop a {
+            color: #3A7CA5;
+            text-decoration: none;
+            font-weight: bold;
         }
         .copy-btn {
-            background: #FFD700;
-            color: black;
+            background-color: #4CAF50;
+            color: white;
             border: none;
             padding: 10px;
+            margin-top: 10px;
             cursor: pointer;
             border-radius: 5px;
         }
+        .copy-btn:hover {
+            background-color: #45A049;
+        }
     </style>
     <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(function() {
-                alert('Código copiado!');
+        function copiarCodigo(codigo) {
+            navigator.clipboard.writeText(codigo).then(function() {
+                alert("Código copiado: " + codigo);
             }, function(err) {
-                alert('Erro ao copiar código');
+                console.error("Erro ao copiar: ", err);
             });
         }
     </script>
 </head>
 <body>
     <div class="container">
-        <h1>Airdrop Fácil</h1>
-        <div class="airdrop-box">
-            <h2>BioMatrix</h2>
-            <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
-            <a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" target="_blank">Clique Aqui</a>
-            <button class="copy-btn" onclick="copyToClipboard('BAXT1Q')">Copiar Código</button>
-        </div>
-        <div class="airdrop-box">
-            <h2>NodePay</h2>
-            <p>Sua internet e dados são recursos valiosos na economia de IA, a Nodepay os transforma em ativos que você possui.</p>
-            <a href="https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS" target="_blank">Clique Aqui</a>
-        </div>
-        <div class="airdrop-box">
-            <h2>BlockDag</h2>
-            <p>Bem-vindo à BlockDAG Mining, o portal para mineração de criptomoedas móveis sem esforço.</p>
-            <a href="https://blockdag.network/product/blockdagx1" target="_blank">Clique Aqui</a>
-            <button class="copy-btn" onclick="copyToClipboard('JMOBwk3l')">Copiar Código</button>
-        </div>
-        <div class="airdrop-box">
-            <h2>Nebux</h2>
-            <p>Our X Social Platform Deserves More Value. I just claimed 33,601 XCOIN! What about you?</p>
-            <a href="https://nebx.io/login?v=94514613" target="_blank">Clique Aqui</a>
-        </div>
+        <h1>Airdrop Fácil</h1><div class="airdrop">
+        <h2>BioMatrix</h2>
+        <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
+        <a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" target="_blank">Clique Aqui</a>
+        <button class="copy-btn" onclick="copiarCodigo('BAXT1Q')">Copiar Código</button>
     </div>
+
+    <div class="airdrop">
+        <h2>NodePay</h2>
+        <p>Sua internet e dados são recursos valiosos na economia de IA, a Nodepay os transforma em ativos que você possui.</p>
+        <a href="https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS" target="_blank">Clique Aqui</a>
+    </div>
+
+    <div class="airdrop">
+        <h2>BlockDag</h2>
+        <p>Bem-vindo à BlockDAG Mining, o portal para mineração de criptomoedas móveis sem esforço.</p>
+        <a href="https://blockdag.network/product/blockdagx1" target="_blank">Clique Aqui</a>
+        <button class="copy-btn" onclick="copiarCodigo('JMOBwk3l')">Copiar Código</button>
+    </div>
+
+    <div class="airdrop">
+        <h2>Nebux</h2>
+        <p>Our X Social Platform Deserves More Value. I just claimed 33,601 XCOIN! What about you?</p>
+        <a href="https://nebx.io/login?v=94514613" target="_blank">Clique Aqui</a>
+    </div>
+</div>
+
 </body>
 </html>
