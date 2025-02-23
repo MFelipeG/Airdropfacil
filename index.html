@@ -6,101 +6,69 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1a1a1d;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
             color: #ffffff;
             text-align: center;
+            padding: 20px;
         }
         h1 {
             color: #ffcc00;
-            text-shadow: 2px 2px 5px #ff6600;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
         .container {
             max-width: 800px;
             margin: auto;
+            background: rgba(255, 255, 255, 0.2);
             padding: 20px;
-        }
-        .category {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #29293d;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ff6600;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
         .airdrop {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
             padding: 15px;
             margin: 10px 0;
-            background-color: #333355;
             border-radius: 10px;
-            box-shadow: 0 0 5px #ffcc00;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
         }
-        .btn {
-            display: inline-block;
-            padding: 12px 18px;
-            margin: 5px;
-            background: linear-gradient(45deg, #ff6600, #ffcc00);
-            color: #000;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            cursor: pointer;
-            box-shadow: 0 0 8px #ff6600;
-            transition: transform 0.2s;
-        }
-        .btn:hover {
-            background: linear-gradient(45deg, #ffcc00, #ff6600);
+        .airdrop:hover {
             transform: scale(1.05);
         }
-        .code {
-            background-color: #444;
-            padding: 8px;
-            border-radius: 5px;
+        a {
+            color: #ffcc00;
+            text-decoration: none;
             font-weight: bold;
         }
-    </style>
-    <script>
-        function copiarCodigo(codigo) {
-            navigator.clipboard.writeText(codigo);
-            alert("Código copiado: " + codigo);
+        a:hover {
+            text-decoration: underline;
         }
-    </script>
+    </style>
 </head>
 <body>
+    <h1>Airdrop Fácil</h1>
     <div class="container">
-        <h1>Airdrop Fácil</h1><div class="category">
-        <h2>Sites</h2>
         <div class="airdrop">
-            <h3>NodePay</h3>
-            <p>Sua internet e dados são recursos valiosos na economia de IA, a Nodepay os transforma em ativos que você possui.</p>
-            <a href="https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS" class="btn" target="_blank">CLIQUE AQUI</a>
-        </div>
-        <div class="airdrop">
-            <h3>Nebux</h3>
-            <p>Our X Social Platform Deserves More Value. I just claimed 33,601 XCOIN! What about you?</p>
-            <a href="https://nebx.io/login?v=94514613" class="btn" target="_blank">CLIQUE AQUI</a>
-        </div>
-    </div>
-    
-    <div class="category">
-        <h2>Apps</h2>
-        <div class="airdrop">
-            <h3>BioMatrix</h3>
+            <h2>BioMatrix</h2>
             <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
-            <a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" class="btn" target="_blank">CLIQUE AQUI</a>
-            <button class="btn" onclick="copiarCodigo('BAXT1Q')">Copiar Código</button>
+            <p><a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" target="_blank">🔗 Clique Aqui</a></p>
+            <p><strong>Código:</strong> BAXT1Q</p>
         </div>
         <div class="airdrop">
-            <h3>NodePay</h3>
+            <h2>NodePay</h2>
             <p>Sua internet e dados são recursos valiosos na economia de IA, a Nodepay os transforma em ativos que você possui.</p>
-            <a href="https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS" class="btn" target="_blank">CLIQUE AQUI</a>
+            <p><a href="https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS" target="_blank">🔗 Clique Aqui</a></p>
         </div>
         <div class="airdrop">
-            <h3>BlockDag</h3>
+            <h2>BlockDag</h2>
             <p>Bem-vindo à BlockDAG Mining, o portal para mineração de criptomoedas móveis sem esforço.</p>
-            <a href="https://blockdag.network/product/blockdagx1" class="btn" target="_blank">CLIQUE AQUI</a>
-            <button class="btn" onclick="copiarCodigo('JMOBwk3l')">Copiar Código</button>
+            <p><a href="https://blockdag.network/product/blockdagx1" target="_blank">🔗 Clique Aqui</a></p>
+            <p><strong>Código:</strong> JMOBwk3l</p>
+        </div>
+        <div class="airdrop">
+            <h2>Nebux</h2>
+            <p>Our X Social Platform Deserves More Value. I just claimed 33,601 XCOIN! What about you?</p>
+            <p><a href="https://nebx.io/login?v=94514613" target="_blank">🔗 Clique Aqui</a></p>
         </div>
     </div>
-</div>
-
 </body>
 </html>
