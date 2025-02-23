@@ -5,84 +5,59 @@
     <title>Airdrop Fácil</title>
     <style>
         body {
+            background-color: #1a1a2e; /* Azul mais suave */
+            color: #ffffff;
             font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #1e3c72, #2a5298);
-            color: white;
             text-align: center;
-            padding: 20px;
         }
         .container {
-            max-width: 800px;
+            width: 80%;
             margin: auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
         }
-        .airdrop-box {
-            background: black;
+        .airdrop {
+            background-color: #333;
             padding: 15px;
             margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
         }
-        h1 {
-            color: #ffcc00;
-        }
-        h2 {
-            color: #ff9900;
-        }
-        .btn {
-            display: block;
-            margin: 10px auto;
+        .botao {
+            background-color: #008CBA;
+            color: white;
             padding: 10px 15px;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 10px;
         }
-        .btn-link {
-            background: #ff6600;
-            color: white;
-        }
-        .btn-copy {
-            background: #0066cc;
-            color: white;
+        .botao:hover {
+            background-color: #005f73;
         }
     </style>
-    <script>
-        function copiarCodigo(codigo) {
-            navigator.clipboard.writeText(codigo).then(() => {
-                alert("Código copiado: " + codigo);
-            });
-        }
-    </script>
 </head>
 <body>
+    <h1>Airdrop Fácil</h1>
+    <h2>Ganhe criptomoedas de forma simples e rápida</h2>
     <div class="container">
-        <h1>Airdrop Fácil</h1>
-        <h2>Airdrops Simples, Recompensas Reais!</h2><div class="airdrop-box">
-        <h3>BioMatrix</h3>
-        <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
-        <button class="btn btn-link" onclick="window.open('https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q', '_blank')">Clique Aqui</button>
-        <button class="btn btn-copy" onclick="copiarCodigo('BAXT1Q')">Copiar Código</button>
+        <div class="airdrop">
+            <h3>BioMatrix</h3>
+            <p>Usada prova de humanoide. Comprovando ser humano, promete pagar criptomoedas por 60 anos.</p>
+            <a href="https://ac-tech.onelink.me/8enJ/qwujwndl?pid=source&af_dp=biomatrix%3A%2F%2F&deep_link_sub1=BAXT1Q" target="_blank" class="botao">Clique Aqui</a>
+            <button class="botao" onclick="copiarCodigo('BAXT1Q')">Copiar Código</button>
+        </div>
+        <div class="airdrop">
+            <h3>NodePay</h3>
+            <p>Sua internet e dados são recursos valiosos na economia de IA, a Nodepay os transforma em ativos que você possui.</p>
+            <a href="https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS" target="_blank" class="botao">Clique Aqui</a>
+        </div>
     </div>
-
-    <div class="airdrop-box">
-        <h3>NodePay</h3>
-        <p>Sua internet e dados são recursos valiosos na economia de IA, a Nodepay os transforma em ativos que você possui.</p>
-        <button class="btn btn-link" onclick="window.open('https://app.nodepay.ai/register?ref=DKcz1bn3sScqfqS', '_blank')">Clique Aqui</button>
-    </div>
-
-    <div class="airdrop-box">
-        <h3>BlockDag</h3>
-        <p>Bem-vindo à BlockDAG Mining, o portal para mineração de criptomoedas móveis sem esforço.</p>
-        <button class="btn btn-link" onclick="window.open('https://blockdag.network/product/blockdagx1', '_blank')">Clique Aqui</button>
-        <button class="btn btn-copy" onclick="copiarCodigo('JMOBwk3l')">Copiar Código</button>
-    </div>
-
-    <div class="airdrop-box">
-        <h3>Nebux</h3>
-        <p>Our X Social Platform Deserves More Value. I just claimed 33,601 XCOIN! What about you?</p>
-        <button class="btn btn-link" onclick="window.open('https://nebx.io/login?v=94514613', '_blank')">Clique Aqui</button>
-    </div>
-</div>
-
+    <script>
+        function copiarCodigo(codigo) {
+            navigator.clipboard.writeText(codigo);
+            alert("Código copiado: " + codigo);
+        }
+    </script>
 </body>
 </html>
